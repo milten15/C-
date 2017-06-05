@@ -17,7 +17,7 @@ namespace ConsoleApp1
             double d;
             var a2 = true;
             var a1 = 10;
-            char symb = 'd';
+            char symb;
             float f;
             long l;
             string name = "Не статическая переменная";
