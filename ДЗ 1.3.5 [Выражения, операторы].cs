@@ -10,6 +10,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            //Каждой переменной из предыдущего задания присвоить результат выражения подходящего типа.
             int a = 10;
             bool isTrue = false;
             string te4ka = "text";
@@ -22,7 +23,8 @@ namespace ConsoleApp1
             long l = 100000000000000;
             string name = "Не статическая переменная";
             Console.WriteLine(name);
-
+            //Подумать и пометить какие значения будут в следующих переменных: 
+            // код не запускал, гуглил читал, коспектировал даже
             int a = 10;
             int b = 15 + 25;                        // b = 40
             int c = a * b + 8;                      // a = 408
