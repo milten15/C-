@@ -48,7 +48,7 @@ namespace ConsoleApp1
                     string color = "";
                     while(color != "colorexit")
                     {
-                        string colorfon = "";
+                        
                         color = Console.ReadLine();
                         if(color == "SetFon")
                         {
