@@ -16,10 +16,7 @@ namespace IMJunior
         static void Main(string[] args)
         {
             int[] ar = new int[5] { 1, 2, 3, 4, 5 };
-            removeElement(ar, 1);
-            addElement(ar, 44);
-            transfer(ar);
-            Console.WriteLine(ar[1]);
+
 
         }
         static int[] removeElement(int[] arr, int id)
