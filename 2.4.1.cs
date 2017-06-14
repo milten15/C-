@@ -13,9 +13,6 @@ namespace IMJunior
         static void Main(string[] args)
         {
 
-            //string Question1 = "Кто вы?", Question2 = "Что вы хотите?", Question3 = "Чем вы можете помочь ордену?";
-
-            //string[] questions = new string[3] { "Кто вы?", "Что вы хотите?", "Чем вы можете помочь ордену?" };
             Dialog[] dialog = new Dialog[3]
             {
                 new Dialog("Кто вы?", new string[] { "Человек", "Брандлмуха", "Кхаджит" }),
