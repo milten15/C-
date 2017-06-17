@@ -6,44 +6,44 @@ namespace IMJunior
     class Program
     {
         //2.4.1
-        /*Воспользуйтесь классами и выделите типичную структуру данных.Воспользуйте массивом объектов этого класса, для того, 
-         * чтобы сделать цикл и избавиться от повторяющегося кода.
-         */
-
+        /*Воспользуйтесь классами и выделите типичную структуру данных. 
+        Воспользуйте массивом объектов этого класса, для того, чтобы сделать цикл и избавиться от повторяющегося кода. 
+        */
         static void Main(string[] args)
         {
-
-            Dialog[] dialog = new Dialog[3]
+            Console.WriteLine(
+                "Совершенно очевидно, что мы не берём в наш орден кого попало. По этому заполни вот эту анкету, и мы примем решение, брать тебя или нет");
+             MyClass[] obj = new MyClass[3]
             {
-                new Dialog("Кто вы?", new string[] { "Человек", "Брандлмуха", "Кхаджит" }),
-                new Dialog("Что вы хотите?", new string[] { "Победить Аразота", "Стать богатым", "Найти боевых товарищей" }),
-                new Dialog("Чем вы можете помочь ордену?", new string[]{ "Я отлчиный воин", "Я добротный маг", "Я могу работать в кузнице" })
+                new MyClass("Кто вы?", new string[] {"Человек", "Брандлмуха", "Кхаджит"}), 
+                new MyClass("Что вы хотите?", new string[] {"Победить Аразота", "Стать богатым", "Найти боевых товарищей"}), 
+                new MyClass("Чем вы можете помочь ордену?", new string[] {"Я отлчиный воин", "Я добротный маг", "Я могу работать в кузнице"}), 
+
             };
-
-            Console.WriteLine("Совершенно очевидно, что мы не берём в наш орден кого попало. По этому заполни вот эту анкету, " +
-                              "и мы примем решение, брать тебя или нет");
-            foreach(Dialog dlg in dialog)
+            foreach (var variable in obj)
             {
-                Console.WriteLine(dlg.question);
-                for(int i = 0; i < dlg.answer.Length; i++)
+                Console.WriteLine(variable.question);
+                for (int i = 0; i < obj.Length; i++)
                 {
-                    Console.WriteLine("[{0}]>{1}", i, dlg.answer[i]);
+                    Console.WriteLine("[{0}]>{1}", i, variable.answer[i]);
+                    variable.isDoorOpen = true;
                 }
-                Console.ReadLine();
-                dlg.isDoorOpen = true;
-            }
+                inOrden += Console.ReadLine();           
+             }         
         }
     }
-    class Dialog
+
+        
+ }
+    class MyClass
     {
-        public bool isDoorOpen;
         public string question;
         public string[] answer;
+        public bool isDoorOpen;
 
-        public Dialog(string question, string[] answer)
+        public MyClass(string question, string[] answer)
         {
-            this.question = question;
-            this.answer = answer;
+           this.question = question;
+           this.answer = answer;
         }
     }
-}
