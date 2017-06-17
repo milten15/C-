@@ -33,7 +33,7 @@ namespace IMJunior
                     variable.isDoorOpen = true;
                 }
                 inOrden += Console.ReadLine();
-                if (inOrden == "020")
+                if (inOrden == "0" + "2" + "0")
                 {
                     Console.WriteLine("Ты принят красавчик!");
                 }            
